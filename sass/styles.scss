@@ -1,0 +1,128 @@
+@import "variables";
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap");
+
+@media screen and (max-width: 1440px) {
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url(../images/pattern-background-desktop.svg);
+        background-repeat: no-repeat;
+        font-family: "Red Hat Display", sans-serif;
+    }
+
+    .main-container {
+        display: flex;
+        width: 400px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: $very-pale-blue;
+        background: white;
+        border-radius: 30px;
+        p {
+            font-size: $paragraph-size;
+        }
+        .hero img {
+            width: 100%;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+        }
+        .main-text {
+            height: 200px;
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: $desaturate-blue;
+            text-align: center;
+            h2 {
+                font-weight: 900;
+            }
+        } //End of main-text
+        .card {
+            width: 300px;
+            height: 60px;
+            padding: 10px;
+            display: flex;
+            background: $very-pale-blue;
+            border-radius: 15px;
+            align-items: center;
+            justify-content: space-evenly;
+            color: $desaturate-blue;
+            .img {
+                flex-grow: 1;
+            }
+            .card-text {
+                flex-grow: 1;
+            }
+            .change {
+                flex-grow: 1;
+                a {
+                    &:hover {
+                        color: lighten(purple, 8);
+                        font-weight: bold;
+                        transition: all 0.5s;
+                    }
+                }
+            }
+            #header {
+                font-weight: 900;
+                color: $dark-blue;
+            }
+        } //End of card
+        .button {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 40px;
+            #payment {
+                margin-bottom: 20px;
+                background: $bright-blue;
+                border: none;
+                border-radius: 14px;
+                box-shadow: 5px 5px 15px lighten($bright-blue, 10);
+                width: 250px;
+                padding: 20px;
+                font-size: $paragraph-size;
+                color: white;
+                font-weight: 700;
+                &:hover {
+                    background: lighten(purple, 8);
+                    cursor: pointer;
+                    transition: all 0.5s;
+                }
+            }
+            a {
+                text-decoration: none;
+                color: $desaturate-blue;
+                font-weight: 700;
+                &:hover {
+                    cursor: pointer;
+                    color: black;
+                    transition: all 0.5s;
+                }
+            }
+        }
+    } //end of main-container
+}
+
+@media screen and (max-width: 375px) {
+    body {
+        background-image: url(../images/pattern-background-mobile.svg);
+        background-repeat: no-repeat;
+    }
+
+    .main-container {
+        width: 300px;
+        background: $very-pale-blue;
+        .main-text {
+            width: 250px;
+        }
+        .card {
+            width: 250px;
+        }
+    }
+}
